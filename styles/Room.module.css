@@ -1,0 +1,224 @@
+.room_container {
+  height: calc(100vh - 56px);
+  border: 1px solid rgb(216, 216, 216);
+  background-color: rgba(0, 0, 0, 0.089);
+  position: relative;
+}
+
+/* start form  */
+.message_form {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(175, 175, 175);
+  border-left: 1px solid rgb(182, 182, 182);
+  display: flex;
+  align-items: center;
+}
+.message_form form {
+  display: flex;
+  align-items: center;
+  width: 85%;
+}
+
+.message_form form input {
+  width: 90%;
+  border: none;
+  height: 35px;
+}
+.message_form form input:focus {
+  outline: none;
+  padding: 10px;
+}
+.message_form form button {
+  width: 70px;
+  border: none;
+  height: 35px;
+  color: white;
+  background-color: rgb(38, 38, 245);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-right: 10px;
+}
+
+.message_form > div {
+  width: 15%;
+  margin-right: 10px;
+}
+.message_form label div {
+  padding: 5px 20px;
+  background-color: rgb(117, 24, 50);
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.message_form label div > svg {
+  font-size: 22px;
+}
+
+/* start messages placeholder */
+.show_messages_place_holder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.493);
+}
+
+.show_messages_place_holder h5 {
+  background-color: grey;
+  padding: 10px 15px;
+  color: rgba(243, 243, 243, 0.87);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(37, 37, 37, 0.795);
+  text-shadow: 1px 1px 2px rgb(66, 66, 66);
+}
+
+/* start show messages  */
+
+.show_messages_container {
+  height: calc(100% - 35px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+/* start  message item */
+
+.message_item {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.message_item div {
+  position: relative;
+}
+.message_item div div::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -15px;
+  top: 18px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid rgba(4, 4, 153, 0.815);
+  border-bottom: 10px solid transparent;
+}
+.message_item div div > div {
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.192);
+}
+.message_item p {
+  margin-bottom: 0;
+  padding: 5px 10px;
+  background-color: rgba(4, 4, 153, 0.815);
+  max-width: 70%;
+  color: white;
+  border-radius: 3px;
+  margin-left: 15px;
+}
+
+/* start  message auth item */
+
+.message_item_auth {
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 15px 0;
+}
+.message_item_auth div {
+  position: relative;
+}
+.message_item_auth div div::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -15px;
+  top: 18px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid rgba(27, 87, 3, 0.877);
+  border-bottom: 10px solid transparent;
+}
+.message_item_auth div div > div {
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.192);
+}
+.message_item_auth p {
+  margin-bottom: 0;
+  padding: 5px 10px;
+  background-color: rgba(27, 87, 3, 0.877);
+  max-width: 70%;
+  color: white;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+
+
+/* start invoke friend modal  */
+
+.invoke_friend_modal>div:first-of-type{
+  
+}
+.invoke_friend_modal h6{
+  background-color: #0606a9eb;
+  text-align: center;
+  color: #e4e4e4;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.Invoke_friend_modal_list_container{
+  min-height: 200px;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.Invoke_friend_modal_no_friends_container{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #efefef;
+}
+.Invoke_friend_modal_list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e4e4e4d1;
+}
+
+.Invoke_friend_modal_list div{
+  display: flex;
+  align-items: center;
+}
+.Invoke_friend_modal_list div p {
+  margin-bottom: 0;
+  margin-left: 5px;
+  font-size: 17px;
+}
+.Invoke_friend_modal_list svg{
+  color: #451265d9;
+  cursor: pointer;
+}
+.Invoke_friend_modal_list svg:hover{
+  transform: scale(1.2);
+}
+.Invoke_friend_modal_no_friends_container div {
+  text-align: center;
+  color: #565656;
+}
+
+.Invoke_friend_modal_no_friends_container div svg{
+  font-size: 70px;
+}
+.Invoke_friend_modal_no_friends_container div p{
+  font-size: 20px;
+  margin-top: 10px;
+}
